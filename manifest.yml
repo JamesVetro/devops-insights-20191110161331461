@@ -5,7 +5,7 @@ applications:
   name: RubberDuckHackathon
   buildpack: python_buildpack
   command: python manage.py start 0.0.0.0:$PORT
-  memory: 512M
+  memory: 256M
   domain: Ducky.apps.internal
   # host: not-used
   env:
