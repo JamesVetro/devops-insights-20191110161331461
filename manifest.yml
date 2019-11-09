@@ -6,8 +6,8 @@ applications:
   buildpack: python_buildpack
   command: python manage.py start 0.0.0.0:$PORT
   memory: 512M
-  domain: not-used.net
-  host: not-used
+  # domain: not-used.net
+  # host: not-used
   env:
     FLASK_APP : server
     FLASK_DEBUG : false
