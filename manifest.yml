@@ -2,12 +2,12 @@
 applications:
 - instances: 1
   timeout: 180
-  name: RubberDuckHackathon
+  name: The Virtual Rubber Ducky Debugger
   buildpack: python_buildpack
   command: python manage.py start 0.0.0.0:$PORT
   memory: 256M
   domain: mybluemix.net
-  host: rubberduckhackathon
+  host: rubberduck
   env:
     FLASK_APP : server
     FLASK_DEBUG : false
