@@ -7,7 +7,7 @@ applications:
   command: python manage.py start 0.0.0.0:$PORT
   memory: 256M
   domain: mybluemix.net
-  host: rubberduck
+  host: RubberDuckDebugger
   env:
     FLASK_APP : server
     FLASK_DEBUG : false
