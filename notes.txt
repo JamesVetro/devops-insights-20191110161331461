@@ -1,0 +1,8 @@
+-Local dev testing-
+In powershell type:  bx dev run
+Then open: http://localhost:3000/
+Save your files and refresh the page.
+
+-Cloud deployment-
+Push the code to master then wait a few minutes for it to build and deploy.
+Go to: http://rubberduckdebugger.mybluemix.net/
