@@ -1,14 +1,18 @@
-FROM python:3.6-alpine
+FROM python:2-alpine
+
+COPY ./requirements.txt /app/requirements.txt
 
 WORKDIR /app
 
-COPY requirements.txt /tmp/requirements.txt
 RUN apk --update add python py-pip openssl ca-certificates py-openssl wget bash linux-headers
 RUN apk --update add --virtual build-dependencies libffi-dev openssl-dev python-dev py-pip build-base \
   && pip install --upgrade pip \
   && pip install --upgrade pipenv\
-  && pip install --upgrade -r /tmp/requirements.txt\
+  && pip install --upgrade -r /app/requirements.txt\
   && apk del build-dependencies
 
 COPY . /app
-CMD ["gunicorn", "-b", "0.0.0.0:3000", "--env", "DJANGO_SETTINGS_MODULE=Rubberducky.settings.production", "Rubberducky.wsgi", "--timeout 120"]
+
+ENTRYPOINT [ "python" ]
+
+CMD [ "hello.py" ]

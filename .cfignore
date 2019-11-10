@@ -1,2 +1,4 @@
-.pyc
-.egg-info
+.gitignore
+LICENSE
+README.md
+vcap-local.json
